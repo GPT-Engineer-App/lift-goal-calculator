@@ -21,7 +21,7 @@ const Index = () => {
       const plateWeight = plateWeights[i];
       const count = Math.floor(remainingWeight / (plateWeight * 2));
       if (count > 0) {
-        plateCount.push({ weight: plateWeight, count });
+        plateCount.push({ weight: plateWeight, count: count * 2 }); // Ensure count is always in multiples of 2
         remainingWeight -= count * plateWeight * 2;
       }
     }
